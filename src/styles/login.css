@@ -1,0 +1,134 @@
+.auth-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  align-items: center;
+  padding-right: 100px;
+}
+
+.login-left {
+  flex: 1;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f4f4f4;
+}
+
+.login-left h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 64px;
+  margin-bottom: -10px;
+  font-weight: medium;
+  letter-spacing: -3px;
+}
+
+.login-left p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #000;
+  opacity: 0.5;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px 0px;
+}
+
+.google-btn,
+.apple-btn {
+  flex: 1;
+  padding: 20px;
+  font-weight: bold;
+  border-radius: 100px;
+  background-color: #00000014;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.google-btn:hover,
+.apple-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.line-or {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.line-or .line {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.line-or .or {
+  margin: 0 10px;
+  color: #888;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 20px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  padding-left: 30px;
+  background-color: #f4f4f4;
+}
+
+.login-form input:focus {
+  outline: #85e7ff 1px solid;
+}
+
+.login-btn {
+  padding: 20px;
+  font-size: 1rem;
+  background-color: #0C272E;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0c272ed7;
+}
+
+.register-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #0C272E;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.login-right {
+  border-radius: 100px;
+  width: 600px;
+  height: 600px;
+}

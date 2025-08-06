@@ -1,0 +1,536 @@
+/* ======= Базалық көрініс ======= */
+.header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5%;
+  background-color: #0c272e;
+  color: white;
+  height: 80px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 90%;
+  z-index: 100;
+  transition: 0.5s ease-in-out;
+}
+
+.header-left2 {
+  display: flex;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+}
+
+.logo2 {
+  height: 35px;
+  margin-right: 10px;
+}
+
+.header-left2 h1 {
+  font-size: 20px;
+}
+
+.header-nav2 {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  width: 65%;
+  justify-content: space-between;
+}
+
+.header-nav2 ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.header-nav2 a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.header-nav2 a:hover {
+  color: #a0a0a0;
+}
+
+.header-actions2,
+.opened-header-actions2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.auth-btn2 a {
+  padding: 13px 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: 0.3s;
+  display: inline-block;
+}
+.auth-btn2 {
+  background-color: #ffffff00;
+  width: fit-content;
+  border-radius: 100px;
+  border: none;
+}
+
+.primary-btn2 a {
+  color: #deff00;
+  border: 1px solid #deff00;
+}
+.primary-btn2 a:hover {
+  color: white;
+  border: 1px solid white;
+}
+
+.secondary-btn2 a {
+  background-color: #deff00;
+  color: #0c272e;
+}
+.secondary-btn2 a:hover {
+  background-color: #fff;
+  color: #0c272e;
+}
+
+/* ======= Бургер ======= */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1000;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  transition: 0.3s;
+}
+
+/* ======= Адаптивті көрініс ======= */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .header-nav2 {
+    display: none;
+    width: fit-content;
+    justify-content: start;
+  }
+
+  .header-actions2 {
+    display: none;
+  }
+
+  .opened-header-actions2 {
+    display: none;
+  }
+
+  .header-nav2.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: fit-content;
+    height: 100vh;
+    background-color: #0c272e;
+    padding-top: 100px;
+    gap: 40px;
+    border-bottom-left-radius: 30px;
+    z-index: 99;
+    animation: slide-in 0.5s ease forwards;
+  }
+
+  .header-nav2.open ul {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .header-nav2.open .opened-header-actions2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    right: -300px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+/*///////////////////////////////////////////////////////////////////////////////*/
+
+.about-container {
+  background-color: #fff;
+}
+
+.xenoContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  width: fit-content;
+  overflow: hidden;
+}
+
+.crystalHeader {
+  position: relative;
+  background: linear-gradient(90deg, #d9f99d 0%, #a7f3d0 50%, #a5f3fc 100%);
+  padding: 7rem 1rem;
+  overflow: hidden;
+}
+
+.quantumFlex {
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.metaTitle {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-top: 2rem;
+}
+
+.etherealSub {
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.prismOverlay {
+  position: absolute;
+  opacity: 0.8;
+}
+
+.prismOverlay:first-of-type {
+  bottom: -5rem;
+  left: -5rem;
+  width: 24rem;
+  height: 24rem;
+  background-color: #a3e635;
+  transform: rotate(45deg);
+}
+
+.prismOverlay:last-of-type {
+  top: -5rem;
+  right: -5rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: #facc15;
+  transform: rotate(45deg);
+  opacity: 0.6;
+}
+
+.holoMatrix {
+  padding: 4rem 150px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.cosmicText {
+  position: relative;
+  z-index: 10;
+}
+
+.transHeading {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 10px;
+  font-family: "Oswald", sans-serif;
+  line-height: 1.1;
+}
+
+.multiPara {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 0.5;
+}
+
+.hyperButton:hover {
+  background-color: #65a30d;
+  transform: scale(1.05);
+}
+
+.quantumBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #a3e635;
+  transform: skewX(12deg);
+  transform-origin: top right;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.nebularExpanse {
+  padding: 4rem 1rem;
+  position: relative;
+  background-color: #f9fafb;
+}
+
+.galacticMission {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  position: relative;
+  z-index: 10;
+}
+
+.cosmicHeading {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #111827;
+  margin: 20px 0px;
+  letter-spacing: -1px;
+  line-height: 1;
+  font-family: "Oswald", sans-serif;
+}
+
+.interText {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.nebularDiag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #a3e635;
+  transform: skewX(-12deg);
+  transform-origin: top left;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.omniRealm {
+  padding: 4rem 1rem;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.supremeMatrix {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+
+.ultimateHeading {
+  font-size: 6rem;
+  margin: 20px 0px ;
+  font-weight: 900;
+  color: #111827;
+  letter-spacing: -1px;
+  line-height: 1;
+  font-family: "Oswald", sans-serif;
+}
+
+.philoCluster {
+  color: #000000;
+  opacity: 0.5;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.metaSuccess {
+  position: relative;
+}
+
+.metaBox {
+  background: linear-gradient(135deg, #dbeafe 0%, #e9d5ff 100%);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.successSpace {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.successIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.successOrb {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.successOrb:first-child {
+  width: 5rem;
+  height: 5rem;
+  background-color: #2563eb;
+}
+
+.successOrb:first-child svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.successOrb:last-child {
+  width: 4rem;
+  height: 4rem;
+  background-color: #22c55e;
+}
+
+.successOrb:last-child svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.centralOrb {
+  width: 7rem;
+  height: 7rem;
+  background-color: #facc15;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.875rem;
+}
+
+.decorOrbs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.decorOrb {
+  border-radius: 50%;
+}
+
+.decorOrb:nth-child(1) {
+  width: 2rem;
+  height: 2rem;
+  background-color: #a855f7;
+}
+
+.decorOrb:nth-child(2) {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #60a5fa;
+}
+
+.decorOrb:nth-child(3) {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #4ade80;
+}
+
+.advantageDiag {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #a3e635;
+  transform: skewX(12deg);
+  transform-origin: bottom right;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.maxWidth7xl {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.gridTwo {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .numLabel {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridTwo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .astralSphere {
+    order: 1;
+  }
+
+  .galacticMission {
+    order: 2;
+  }
+}
+
+.element-section img {
+  width: 100%;
+}
+.element-section {
+  background-color: #fff;
+}
+.about-list {
+  width: 100%;
+}
+.about-list-section {
+  background-color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .galacticMission {
+    max-width: 60%;
+  }
+  .gridTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .supremeMatrix {
+    max-width: 60%;
+  }
+}
