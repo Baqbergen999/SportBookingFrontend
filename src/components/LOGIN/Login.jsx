@@ -5,7 +5,7 @@ import "../../styles/login.css";
 import Header from "../ABOUT_US/Header";
 import Photo from "../../assets/Rectangle 92_LE_upscale_balanced_x4.jpg";
 import jwt_decode from "jwt-decode";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../CONTEXT/AuthContext";
 import { toast } from "react-toastify";
 
 function Login() {
