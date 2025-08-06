@@ -7,7 +7,7 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 import { toast } from "react-toastify";
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://sportbooking-qr6b.onrender.com";
 
 const UserIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -157,7 +157,7 @@ export default function ProfilePage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/users/${userId}/saved`)
+      .get(`https://sportbooking-qr6b.onrender.com/users/${userId}/saved`)
       .then((res) => setSavedSports(res.data))
       .catch((err) => console.error("Сақталғандар қателігі:", err));
   }, []);
@@ -166,7 +166,7 @@ export default function ProfilePage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/users/${userId}/booked`)
+      .get(`https://sportbooking-qr6b.onrender.com/users/${userId}/booked`)
       .then((res) => {
         console.log("Брондалған алаңдар:", res.data);
         setBookedItems(res.data);
@@ -445,7 +445,7 @@ export default function ProfilePage() {
       const decoded = jwt_decode(token);
       const userId = decoded?.id;
 
-      await axios.post("http://localhost:3000/users/unsave", {
+      await axios.post("https://sportbooking-qr6b.onrender.com/users/unsave", {
         userId,
         sportId,
       });
@@ -464,7 +464,7 @@ export default function ProfilePage() {
       const decoded = jwt_decode(token);
       const userId = decoded?.id;
 
-      await axios.post("http://localhost:3000/users/unbook", {
+      await axios.post("https://sportbooking-qr6b.onrender.com/users/unbook", {
         userId,
         sportId,
       });

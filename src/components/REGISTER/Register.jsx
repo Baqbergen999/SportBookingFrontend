@@ -33,7 +33,7 @@ function Register() {
 
     if (validate()) {
       try {
-        const response = await axios.post("http://localhost:3000/register", {
+        const response = await axios.post("https://sportbooking-qr6b.onrender.com/register", {
           username,
           password,
         });

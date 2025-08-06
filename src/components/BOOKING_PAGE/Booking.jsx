@@ -53,7 +53,7 @@ const Booking = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/sportsData")
+      .get("https://sportbooking-qr6b.onrender.com/sportsData")
       .then((response) => {
         setSportsData(response.data);
       })
@@ -68,7 +68,7 @@ const Booking = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:3000/reviews/${selectedFacilityDetail.id}`
+          `https://sportbooking-qr6b.onrender.com/reviews/${selectedFacilityDetail.id}`
         );
 
         const fetchedReviews = response.data.reviews || [];
@@ -100,7 +100,7 @@ const Booking = () => {
       const decoded = token ? jwt_decode(token) : null;
       const userId = decoded?.id;
 
-      const response = await axios.post("http://localhost:3000/users/save", {
+      const response = await axios.post("https://sportbooking-qr6b.onrender.com/users/save", {
         userId,
         sportId,
       });
@@ -130,7 +130,7 @@ const Booking = () => {
     };
 
     try {
-      await axios.post("http://localhost:3000/reviews/add", {
+      await axios.post("https://sportbooking-qr6b.onrender.com/reviews/add", {
         sportId: selectedFacilityDetail.id,
         review: newReview,
       });
@@ -214,7 +214,7 @@ const Booking = () => {
       const decoded = jwt_decode(token);
       const userId = decoded?.id;
 
-      await axios.post("http://localhost:3000/users/book-sport", {
+      await axios.post("https://sportbooking-qr6b.onrender.com/users/book-sport", {
         userId,
         sportId,
       });
@@ -306,7 +306,7 @@ const Booking = () => {
                       const ownerId = decoded.id;
 
                       const response = await axios.post(
-                        "http://localhost:3000/sportsData/add",
+                        "https://sportbooking-qr6b.onrender.com/sportsData/add",
                         {
                           ...newFacility,
                           capacity: parseInt(newFacility.capacity),

@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import yellowline1 from "../../assets/yellowline1.png"
 import line2 from "../../assets/line2.png"
+import line3 from "../../assets/line3.png"
+import line4 from "../../assets/line4.png"
 
 export default function Body() {
   const sports = [
@@ -68,6 +70,7 @@ export default function Body() {
     <main>
       <img className="lines line1" src={yellowline1} alt="" />
       <img className="lines line2" src={line2} alt="" />
+      <img className="lines line3" src={line3} alt="" />
       <section className="hero">
         <div className="hero-left">
           <h1>

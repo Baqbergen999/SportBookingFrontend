@@ -461,7 +461,6 @@ h1 {
 /* SportsGrid.css */
 .sports-wrapper {
   padding: 50px 150px;
-  background-color: #f3f4f6;
   min-height: 100vh;
   z-index: -2 ;
 }
@@ -600,6 +599,8 @@ h1 {
   flex-direction: column;
   justify-content: center;
   border-radius: 50px;
+  
+  background-color: #f3f4f6;
 }
 .informations {
   display: flex;
@@ -1086,6 +1087,22 @@ textarea {
 }
 .line2 {
   width: 100%;
-  top: 170vh;
-  z-index: 1;
+  top: 190vh;
+}
+.line3 {
+  width: 50%;
+  height: 150vh;
+  object-fit: cover;
+  top: 350vh;
+}
+@media (max-width: 768px) {
+  .line1 {
+    top: 160vh;
+  }
+  .line2 {
+    top: 260vh;
+  }
+  .line3 {
+    top: 420vh;
+  }
 }

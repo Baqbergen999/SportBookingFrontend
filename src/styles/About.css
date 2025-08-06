@@ -243,6 +243,7 @@
   padding: 4rem 150px;
   position: relative;
   background-color: #ffffff;
+  z-index: 2;
 }
 
 .cosmicText {
@@ -290,6 +291,7 @@
   padding: 4rem 1rem;
   position: relative;
   background-color: #f9fafb;
+  z-index: 2;
 }
 
 .galacticMission {
@@ -337,6 +339,7 @@
   padding: 4rem 1rem;
   position: relative;
   background-color: #ffffff;
+  z-index: 2;
 }
 
 .supremeMatrix {
@@ -481,6 +484,7 @@
   display: grid;
   gap: 4rem;
   align-items: center;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
