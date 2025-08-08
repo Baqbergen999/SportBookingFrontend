@@ -3,13 +3,11 @@ import { createContext, useState, useEffect, useContext } from "react";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  // Алғашқы мәнді localStorage-тен аламыз
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
     const stored = localStorage.getItem("isLoggedIn");
-    return stored === "true"; // localStorage-те string сақталады
+    return stored === "true";
   });
 
-  // isLoggedIn өзгерсе, localStorage-ке сақтаймыз
   useEffect(() => {
     localStorage.setItem("isLoggedIn", isLoggedIn);
   }, [isLoggedIn]);

@@ -14,14 +14,41 @@ function Register() {
   const validate = () => {
     const newErrors = {};
 
+    const weakPasswords = [
+      "123456",
+      "123456789",
+      "password",
+      "12345678",
+      "qwerty",
+      "12345",
+      "123123",
+      "111111",
+      "abc123",
+      "000000",
+      "qwerty123",
+      "1q2w3e4r",
+    ];
+
     if (!username.trim()) {
       newErrors.username = "Атыңызды енгізіңіз";
+    } else if (username.length < 3) {
+      newErrors.username = "Атыңыз кемінде 3 символ болуы керек";
+    } else if (!/^[a-zA-Zа-яА-ЯёЁ\s]+$/.test(username)) {
+      newErrors.username = "Атыңыз тек әріптерден тұруы керек";
     }
 
     if (!password) {
       newErrors.password = "Құпиясөзді енгізіңіз";
     } else if (password.length < 6) {
       newErrors.password = "Құпиясөз кемінде 6 символ болуы керек";
+    } else if (!/[A-Z]/.test(password)) {
+      newErrors.password = "Құпиясөзде бір бас әріп болу керек";
+    } else if (!/[0-9]/.test(password)) {
+      newErrors.password = "Құпиясөзде бір сан болу керек";
+    } else if (!/[!@#$%^&*_-]/.test(password)) {
+      newErrors.password = "Құпиясөзде арнайы символ болу керек (!@#$%^&*)";
+    } else if (weakPasswords.includes(password.toLowerCase())) {
+      newErrors.password = "Құпиясөз тым оңай. Басқасын таңдаңыз.";
     }
 
     setErrors(newErrors);
@@ -33,10 +60,13 @@ function Register() {
 
     if (validate()) {
       try {
-        const response = await axios.post("https://sportbooking-qr6b.onrender.com/register", {
-          username,
-          password,
-        });
+        const response = await axios.post(
+          "https://sportbooking-qr6b.onrender.com/register",
+          {
+            username,
+            password,
+          }
+        );
 
         const { token, user } = response.data;
 
@@ -93,7 +123,9 @@ function Register() {
               onChange={(e) => setUsername(e.target.value)}
             />
             {errors.username && (
-              <p style={{ color: "red", marginTop: "-10px" }}>{errors.username}</p>
+              <p style={{ color: "red", marginTop: "-10px" }}>
+                {errors.username}
+              </p>
             )}
 
             <input
@@ -103,7 +135,9 @@ function Register() {
               onChange={(e) => setPassword(e.target.value)}
             />
             {errors.password && (
-              <p style={{ color: "red", marginTop: "-10px" }}>{errors.password}</p>
+              <p style={{ color: "red", marginTop: "-10px" }}>
+                {errors.password}
+              </p>
             )}
 
             <button type="submit" className="login-btn">

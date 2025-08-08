@@ -52,7 +52,10 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="https://wa.me/77052652485" onClick={() => setMenuOpen(false)}>
+            <Link
+              to="https://wa.me/77052652485"
+              onClick={() => setMenuOpen(false)}
+            >
               Байланысу
             </Link>
           </li>

@@ -1,11 +1,11 @@
-import React from 'react';
-import Header from './Header';
-import Body from './Body';
-import Footer from './Footer';
+import React from "react";
+import Header from "./Header";
+import Body from "./Body";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
-    <div className='home-body'>
+    <div className="home-body">
       <Header></Header>
       <Body></Body>
       <Footer></Footer>

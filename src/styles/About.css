@@ -351,7 +351,7 @@
 
 .ultimateHeading {
   font-size: 6rem;
-  margin: 20px 0px ;
+  margin: 20px 0px;
   font-weight: 900;
   color: #111827;
   letter-spacing: -1px;
@@ -524,9 +524,8 @@
   background-color: #fff;
 }
 
-
 @media (max-width: 768px) {
-    .galacticMission {
+  .galacticMission {
     max-width: 60%;
   }
   .gridTwo {

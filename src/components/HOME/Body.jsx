@@ -1,5 +1,5 @@
 import React from "react";
-import '../../styles/Home.css';
+import "../../styles/Home.css";
 import heroImage from "../../assets/icons.png";
 import arrow from "../../assets/arrow.png";
 import Uilesim from "../../assets/Uylesyim.png";
@@ -7,10 +7,10 @@ import { useState } from "react";
 import send from "../../assets/send.png";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import yellowline1 from "../../assets/yellowline1.png"
-import line2 from "../../assets/line2.png"
-import line3 from "../../assets/line3.png"
-import line4 from "../../assets/line4.png"
+import yellowline1 from "../../assets/yellowline1.png";
+import line2 from "../../assets/line2.png";
+import line3 from "../../assets/line3.png";
+import line4 from "../../assets/line4.png";
 
 export default function Body() {
   const sports = [
@@ -86,7 +86,9 @@ export default function Body() {
           </p>
 
           <div className="hero-buttons">
-            <Link to={"/booking"} className="outline">Қазір брондау</Link>
+            <Link to={"/booking"} className="outline">
+              Қазір брондау
+            </Link>
             <Link to={"/booking"} className="filled">
               <img width={"30px"} src={arrow} alt="" />
             </Link>
@@ -123,7 +125,9 @@ export default function Body() {
             болмаған.
           </p>
           <div className="about-buttons ortaq-btns">
-            <Link to={"/aboutus"} className="outline about">Толығырақ</Link>
+            <Link to={"/aboutus"} className="outline about">
+              Толығырақ
+            </Link>
             <Link to={"/aboutus"} className="filled">
               <img width={"30px"} src={arrow} alt="" />
             </Link>
@@ -154,7 +158,9 @@ export default function Body() {
             ))}
           </div>
           <div className="best-buttons ortaq-btns">
-            <Link to={"/booking"} className="outline about">Барлығы</Link>
+            <Link to={"/booking"} className="outline about">
+              Барлығы
+            </Link>
             <Link to={"/booking"} className="filled">
               <img width={"30px"} src={arrow} alt="" />
             </Link>
@@ -166,7 +172,9 @@ export default function Body() {
         <h1>АЛҒАШҚЫ БРОН</h1>
         <p>30% ЖЕҢІЛДІК СЕНІ КҮТУДЕ</p>
         <div className="discount-btn ortaq-btns">
-          <Link to={"/booking"} className="outline about">Қазір Брондау</Link>
+          <Link to={"/booking"} className="outline about">
+            Қазір Брондау
+          </Link>
           <Link to={"/booking"} className="filled">
             <img width={"30px"} src={arrow} alt="" />
           </Link>
@@ -210,11 +218,8 @@ export default function Body() {
             style={{ transform: `translateX(-${index * cardWidth}px)` }}
           >
             <div className="comment-card">
-              
-              
               <img src="https://i.pravatar.cc/200?u=1" alt="user" />
-              
-              
+
               <div className="comment-info">
                 <p className="ratings">⭐️⭐️⭐️⭐️⭐️</p>
                 <h2>John Doee</h2>
@@ -226,16 +231,14 @@ export default function Body() {
                   бірге ойнау үшін тамаша орын!
                 </p>
               </div>
-              
             </div>
 
             <div className="comment-card">
               <img src="https://i.pravatar.cc/200?u=2" alt="user" />
-              
-              
+
               <div className="comment-info">
-              <p className="ratings">⭐️⭐️⭐️⭐️⭐️</p>
-              
+                <p className="ratings">⭐️⭐️⭐️⭐️⭐️</p>
+
                 <h2>Esen Moldir</h2>
                 <h3>Жарияланды: 14:45</h3>
 
@@ -246,15 +249,11 @@ export default function Body() {
                   қиыншылық туғызады екен, содада рахмет!
                 </p>
               </div>
-              
             </div>
 
             <div className="comment-card">
-              
-              
               <img src="https://i.pravatar.cc/200?u=3" alt="user" />
-              
-              
+
               <div className="comment-info">
                 <p className="ratings">⭐️⭐️⭐️⭐️⭐️</p>
                 <h2>Talgat Gulmira</h2>
@@ -266,7 +265,6 @@ export default function Body() {
                   спортзалдар да өте тамаша, әрқашан қолданамын! Бәріне рахмет!
                 </p>
               </div>
-              
             </div>
           </div>
         </div>
@@ -303,10 +301,7 @@ export default function Body() {
               ))}
             </div>
 
-            <textarea
-              rows="5"
-              placeholder=""
-            ></textarea>
+            <textarea rows="5" placeholder=""></textarea>
 
             <button className="send-btn">
               <img src={send} alt="" />

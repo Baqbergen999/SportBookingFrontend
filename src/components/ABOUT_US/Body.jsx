@@ -42,7 +42,9 @@ export default function Component() {
                 </div>
 
                 <div className="about-buttons ortaq-btns">
-                  <Link to={"/booking"} className="outline about">Қазір брондау</Link>
+                  <Link to={"/booking"} className="outline about">
+                    Қазір брондау
+                  </Link>
                   <Link to={"/booking"} className="filled">
                     <img width={"30px"} src={arrow} alt="" />
                   </Link>
@@ -76,7 +78,9 @@ export default function Component() {
                 </div>
 
                 <div className="about-buttons ortaq-btns">
-                  <Link to={"/booking"} className="outline about">Қазір брондау</Link>
+                  <Link to={"/booking"} className="outline about">
+                    Қазір брондау
+                  </Link>
                   <Link to={"/booking"} className="filled">
                     <img width={"30px"} src={arrow} alt="" />
                   </Link>
@@ -105,7 +109,9 @@ export default function Component() {
                 </div>
 
                 <div className="about-buttons ortaq-btns">
-                  <Link to={"/booking"} className="outline about">Қазір брондау</Link>
+                  <Link to={"/booking"} className="outline about">
+                    Қазір брондау
+                  </Link>
                   <Link to={"/booking"} className="filled">
                     <img width={"30px"} src={arrow} alt="" />
                   </Link>

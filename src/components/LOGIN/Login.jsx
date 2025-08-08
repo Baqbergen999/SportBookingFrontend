@@ -18,10 +18,13 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://sportbooking-qr6b.onrender.com/login", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://sportbooking-qr6b.onrender.com/login",
+        {
+          username,
+          password,
+        }
+      );
 
       const { token, user } = response.data;
 

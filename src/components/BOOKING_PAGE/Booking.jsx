@@ -51,6 +51,8 @@ const Booking = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sportsData, setSportsData] = useState([]);
 
+
+
   useEffect(() => {
     axios
       .get("https://sportbooking-qr6b.onrender.com/sportsData")
@@ -73,7 +75,6 @@ const Booking = () => {
 
         const fetchedReviews = response.data.reviews || [];
 
-        // ground объектісін жаңарту
         setGround((prev) => ({
           ...prev,
           reviews: fetchedReviews,
@@ -100,13 +101,17 @@ const Booking = () => {
       const decoded = token ? jwt_decode(token) : null;
       const userId = decoded?.id;
 
-      const response = await axios.post("https://sportbooking-qr6b.onrender.com/users/save", {
-        userId,
-        sportId,
-      });
+      const response = await axios.post(
+        "https://sportbooking-qr6b.onrender.com/users/save",
+        {
+          userId,
+          sportId,
+        }
+      );
 
       toast.info("Спорт профильде сақталды! Бас тарту үшін профильге өтіңіз.");
     } catch (err) {
+      toast.error("Аккаунтқа кірмей сақтай алмайсыз!");
       console.error("Қате:", err.response?.data || err.message);
     }
   };
@@ -164,12 +169,10 @@ const Booking = () => {
   useEffect(() => {
     let filtered = sportsData;
 
-    // Қала бойынша сүзу
     if (selectedCity) {
       filtered = filtered.filter((facility) => facility.city === selectedCity);
     }
 
-    // Атауы бойынша сүзу
     if (searchTerm.trim() !== "") {
       filtered = filtered.filter((facility) =>
         facility.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -181,19 +184,6 @@ const Booking = () => {
 
   const handleBooking = (e) => {
     e.preventDefault();
-    toast.success(
-      `Брондау сәтті орындалды!\n\nОбъект: ${
-        sportsData.find((f) => f.id === Number.parseInt(selectedFacility))?.name
-      }\nКүні: ${selectedDate}\nУақыты: ${selectedTime}\nАты-жөні: ${
-        bookingData.name
-      }\nТелефон: ${bookingData.phone}`
-    );
-    setShowBookingForm(false);
-    setSelectedCity("");
-    setSelectedFacility("");
-    setSelectedDate("");
-    setSelectedTime("");
-    setBookingData({ name: "", phone: "", email: "", participants: 1 });
   };
 
   const selectedFacilityData = sportsData.find(
@@ -214,15 +204,32 @@ const Booking = () => {
       const decoded = jwt_decode(token);
       const userId = decoded?.id;
 
-      await axios.post("https://sportbooking-qr6b.onrender.com/users/book-sport", {
-        userId,
-        sportId,
-      });
+      await axios.post(
+        "https://sportbooking-qr6b.onrender.com/users/book-sport",
+        {
+          userId,
+          sportId,
+        }
+      );
+      toast.success(
+        `\nОбъект: ${
+          sportsData.find((f) => f.id === Number.parseInt(selectedFacility))
+            ?.name
+        }\nКүні: ${selectedDate}\nУақыты: ${selectedTime}\nАты-жөні: ${
+          bookingData.name
+        }\nТелефон: ${bookingData.phone}`
+      );
+      setShowBookingForm(false);
+      setSelectedCity("");
+      setSelectedFacility("");
+      setSelectedDate("");
+      setSelectedTime("");
+      setBookingData({ name: "", phone: "", email: "", participants: 1 });
 
       toast.success("Сәтті брондалды!");
     } catch (error) {
       console.error("Брондау қатесі:", error);
-      toast.error("Қате шықты!");
+      toast.error("Брондау үшін аккаунқа кіріңіз!");
     }
   };
 

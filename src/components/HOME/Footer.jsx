@@ -1,7 +1,7 @@
-import React from 'react';
-import '../../styles/Home.css';
-import { FaYoutube, FaTwitter, FaTiktok, FaGithub } from 'react-icons/fa';
-import logo from '../../assets/black-logo.png';
+import React from "react";
+import "../../styles/Home.css";
+import { FaYoutube, FaTwitter, FaTiktok, FaGithub } from "react-icons/fa";
+import logo from "../../assets/black-logo.png";
 
 const Footer = () => {
   return (
@@ -26,7 +26,11 @@ const Footer = () => {
           </div>
           <div>
             <p>Орналасуы</p>
-            <p>Алматы қаласы, Медеу ауданы<br />Мәуленова 92</p>
+            <p>
+              Алматы қаласы, Медеу ауданы
+              <br />
+              Мәуленова 92
+            </p>
           </div>
         </div>
       </div>

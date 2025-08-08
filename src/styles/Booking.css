@@ -990,9 +990,11 @@
   .booking-summary {
     padding: 15px 20px;
   }
-  .detail-left, .detail-right {
+  .detail-left,
+  .detail-right {
     width: 90%;
-  } .filter-tabs{
+  }
+  .filter-tabs {
     justify-content: center;
   }
   .add-facility-btn {
@@ -1000,7 +1002,8 @@
   }
   .footer-links {
     text-align: center;
-  } .footer-logo {
+  }
+  .footer-logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1298,14 +1301,14 @@
   scale: 0.8;
 }
 
-
 .add-facility-btn {
   border-radius: 50px;
   border: none;
   background-color: #d5d5d56e;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.214);
   transition: 0.3s all;
-} .add-facility-btn:hover {
+}
+.add-facility-btn:hover {
   background-color: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.214);
 }
@@ -1326,69 +1329,70 @@
   font-size: 1rem;
   width: 92%;
   margin-bottom: 20px;
-} .search-input::placeholder {
+}
+.search-input::placeholder {
   color: #4a55689f;
 }
 
 .bookmarkBtn {
-    width: 100px;
-    height: 40px;
-    border-radius: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.349);
-    background-color: rgb(12, 12, 12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition-duration: 0.3s;
-    overflow: hidden;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-  }
+  width: 100px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.349);
+  background-color: rgb(12, 12, 12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
 
-  .IconContainer {
-    width: 30px;
-    height: 30px;
-    background: linear-gradient(to bottom, rgb(241, 255, 136), rgb(252, 255, 70));
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    z-index: 2;
-    transition-duration: 0.3s;
-  }
+.IconContainer {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to bottom, rgb(241, 255, 136), rgb(252, 255, 70));
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: 0.3s;
+}
 
-  .icon {
-    border-radius: 1px;
-  }
+.icon {
+  border-radius: 1px;
+}
 
-  .text {
-    height: 100%;
-    width: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    z-index: 1;
-    transition-duration: 0.3s;
-    font-size: 1.04em;
-  }
+.text {
+  height: 100%;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  transition-duration: 0.3s;
+  font-size: 1.04em;
+}
 
-  .bookmarkBtn:hover .IconContainer {
-    width: 90px;
-    transition-duration: 0.3s;
-  }
+.bookmarkBtn:hover .IconContainer {
+  width: 90px;
+  transition-duration: 0.3s;
+}
 
-  .bookmarkBtn:hover .text {
-    transform: translate(10px);
-    width: 0;
-    font-size: 0;
-    transition-duration: 0.3s;
-  }
+.bookmarkBtn:hover .text {
+  transform: translate(10px);
+  width: 0;
+  font-size: 0;
+  transition-duration: 0.3s;
+}
 
-  .bookmarkBtn:active {
-    transform: scale(0.95);
-    transition-duration: 0.3s;
-  }
+.bookmarkBtn:active {
+  transform: scale(0.95);
+  transition-duration: 0.3s;
+}
